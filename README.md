@@ -30,7 +30,7 @@ III. Once the location is predicted, sensor data will be used to update the loca
 * During update step for Radar, we also make sure that the updated φ is in a certain range [-π, π]. 
 
 
-* After each update step, updated values will be pushed into an estimate array in order to calculate the root mean square error(rmse) between the predicted values and actual ground truth values. As can be seen in the following gif video, the errors for (Px, Py, Vx, Vy) are [0.0954, 0.0837, 0.4499, 0.4357] at the end of the simulation.
+* After each update step, updated values will be pushed into an estimate array in order to calculate the root mean square error(rmse) between the predicted values and actual ground truth values. As can be seen in the following gif video, the errors for (Px, Py, Vx, Vy) are [0.0768, 0.0800, 0.3202, 0.2674] at the end of the simulation.
 
 <p align="center">
 <img src="https://j.gifs.com/gLyr3l.gif" width = "600" />
