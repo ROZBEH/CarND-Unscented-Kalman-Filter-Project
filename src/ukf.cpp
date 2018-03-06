@@ -3,7 +3,6 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "graph.h"
 using namespace std;
 
 
@@ -295,24 +294,7 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
   P_ = P_ - K * S * K.transpose();
   float nis_temp = (z - z_pred).transpose() * S.inverse() * (z - z_pred);
   NIS_lidar.push_back(nis_temp);
-  counter += 1;
-  if (counter == 498){
-    if (counter == 498 || counter == 497){
-    // ofstream outFile("my_file_lidar.txt");
-    // // the important part
-    // for (const auto &e : NIS_lidar) outFile << e << "\n";
-
-  plot p;
-  for(int a=0;a<100;a++) {
-    vector<float> x,y;
-    for(int k=a;k<a+200;k++) {
-      x.push_back(k);
-      y.push_back(k*k);
-    }
-    p.plot_data(x,y);
-  }
-  }
-  }
+  
   // cout<< "NIS_lidar = "<<NIS_lidar<<" -------";
 }
 
@@ -378,20 +360,6 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
   P_ = P_ - K * S * K.transpose();
   float nis_temp = (z - z_pred).transpose() * S.inverse() * (z - z_pred);
   NIS_radar.push_back(nis_temp);
-  counter += 1;
-  if (counter == 498 || counter == 497){
-    // ofstream outFile("my_file_radar.txt");
-    // // the important part
-    // for (const auto &e : NIS_radar) outFile << e << "\n";
-  plot p;
-  for(int a=0;a<100;a++) {
-    vector<float> x,y;
-    for(int k=a;k<a+200;k++) {
-      x.push_back(k);
-      y.push_back(k*k);
-    }
-    p.plot_data(x,y);
-  }
-  }
+  
   // cout<< "NIS_radar = "<<NIS_radar<<endl;
 }
