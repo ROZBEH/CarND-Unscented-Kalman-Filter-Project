@@ -33,7 +33,7 @@ III. Once the location is predicted, sensor data will be used to update the loca
 * After each update step, updated values will be pushed into an estimate array in order to calculate the root mean square error(rmse) between the predicted values and actual ground truth values. As can be seen in the following gif video, the errors for (Px, Py, Vx, Vy) are [0.0954, 0.0837, 0.4499, 0.4357] at the end of the simulation.
 
 <p align="center">
-<img src="https://j.gifs.com/yrz0NV.gif" width = "600" />
+<img src="https://j.gifs.com/ZVZwnv.gif" width = "600" />
 </p>
 
 IV. I also performed simulations for cases were just one of the sensors was active and measurements of the other senor was not considered during update and prediction step. We observe higher rmse when one of the sensors is inactive, this is because we have less information about the object, as a result there will be more uncertainty in update step and the performance will be degraded. Comparing Laser and Radar based on rmse, it appears that laser performs better because it has lower rmse error. Here is table comparing rmse values for sensor fusion, laser, and radar.
