@@ -43,7 +43,7 @@ IV. I also performed simulations for cases were just one of the sensors was acti
 
 
 
-<p align="center"><img src="src/Plot.jpg" width = "800" alt="Combined Image" />
+<p align="center"><img src="src/Plot.jpg" width = "1000" alt="Combined Image" />
 </p>
 
 </br>
